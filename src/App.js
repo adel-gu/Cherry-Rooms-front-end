@@ -1,5 +1,5 @@
 function App() {
-  return </>;
+  return <SideBar />;
 }
 
 export default App;
