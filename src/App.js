@@ -1,5 +1,7 @@
+import Sidebar from './pages/sideBar';
+
 function App() {
-  return <SideBar />;
+  return <Sidebar />;
 }
 
 export default App;
