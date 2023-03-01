@@ -1,0 +1,43 @@
+.sidebar {
+  transform: translateX(0%);
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  z-index: 100;
+  transition: all 0.3s ease-in-out;
+}
+
+.sidebar-hidden {
+  transform: translateX(-101%);
+  z-index: 100;
+  background: #fff;
+  transition: all 0.3s ease-in-out;
+}
+
+.close-sidebar {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  font-size: 1rem;
+  z-index: 15;
+}
+
+@media screen and (min-width: 768px) {
+  .sidebar-hidden,
+  .sidebar {
+    transform: translateX(0);
+    left: 0;
+    top: 0;
+    width: 25%;
+    transition: all 250ms ease-in-out;
+  }
+
+  .sidebar-btn {
+    display: none;
+  }
+}
+
+
+
+
+
+
+
