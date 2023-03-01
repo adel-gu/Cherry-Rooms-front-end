@@ -1,0 +1,16 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  border-radius: 12px;
+  /* align-items: center; */
+  gap: 2rem;
+  width: 20.125rem;
+  height: 35.5rem;
+  /* background-image: url(/frontend-mentor-multi-step-form/assets/images/bg-sidebar-desktop.svg); */
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  padding: 2.5rem 2rem;
+  text-align: center;
+  color:#fff
+}

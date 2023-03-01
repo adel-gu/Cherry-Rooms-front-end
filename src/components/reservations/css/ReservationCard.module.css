@@ -1,0 +1,47 @@
+.outerContainer {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.5rem;
+}
+
+.container {
+  height: unset;
+  width: 940px;
+  display: flex;
+  flex-direction: row;
+  padding: 1rem;
+  background-color: #fff;
+  border-radius: 15px;
+  box-shadow: 0 25px 40px -20px hsla(0, 0%, 0%, 0.094);
+}
+
+.innerContainer {
+  margin-top: unset;
+    height: unset;
+    flex: 1;
+    padding: 2.5rem 4.25rem 1rem 5.25rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.title {
+  font-weight: 700;
+    color: hsl(213, 96%, 18%);
+    font-size: 2rem
+}
+
+.text {
+  font-size: 1rem;
+  line-height: 1.5625rem;
+  margin: 0.6875rem 0 1.5rem;
+  color: hsl(231, 11%, 63%);
+}
+
+.formContainer {
+  display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
