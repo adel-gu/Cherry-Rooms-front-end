@@ -16,7 +16,7 @@ const RoomDetails = () => {
         <div className="w-full sm:w-[70%] rounded-xl">
           <img src={room.image} alt="room" className="w-[100%] object-cover" />
         </div>
-        <div className="w-full sm:w-[30%] sm:ml-2">
+        <div className="w-full sm:w-[30%] sm:ml-2 flex flex-col">
           <h2 className="font-bold text-xl text-right text-gray-800 my-2">
             {room.name}
           </h2>
@@ -35,6 +35,12 @@ const RoomDetails = () => {
             </li>
           </ul>
           <p className="text-sm text-zinc-500 pl-2">{room.description}</p>
+          <button
+            type="button"
+            className="bg-prime py-2 px-4 item self-end text-white rounded-full mt-8"
+          >
+            Reserve
+          </button>
         </div>
       </div>
     </div>
