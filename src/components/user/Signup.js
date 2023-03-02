@@ -31,7 +31,7 @@ const SignUp = () => {
   }
 
   return (
-    <>
+    <div className="main-container">
       <form ref={formRef} onSubmit={(e) => handleSubmit(e)}>
         <ul>
           <li>
@@ -58,7 +58,7 @@ const SignUp = () => {
         Already got an account:
         <Link to="/login">Log In</Link>
       </div>
-    </>
+    </div>
   );
 };
 

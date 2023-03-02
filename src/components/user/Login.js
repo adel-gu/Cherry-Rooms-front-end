@@ -29,7 +29,7 @@ const Login = () => {
   }
 
   return (
-    <>
+    <div className="main-container">
       <form ref={formRef} onSubmit={(e) => handleSubmit(e)}>
         <ul>
           <li>
@@ -50,7 +50,7 @@ const Login = () => {
         Create an account:
         <Link to="/signup">Sign Up</Link>
       </div>
-    </>
+    </div>
   );
 };
 
