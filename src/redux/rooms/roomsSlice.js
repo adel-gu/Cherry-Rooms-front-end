@@ -61,9 +61,13 @@ const initialState = [
 const roomsSlice = createSlice({
   name: 'rooms',
   initialState,
-  reducers: {},
+  reducers: {
+    singleRoom(state, action) {
+      return action.payload;
+    },
+  },
 });
 
-// export const { postAdded } = postsSlice.actions;
+export const { singleRoom } = roomsSlice.actions;
 export const selectAllRooms = (state) => state.rooms;
 export default roomsSlice.reducer;
