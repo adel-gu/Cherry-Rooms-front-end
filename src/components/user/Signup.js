@@ -1,13 +1,16 @@
 import { useRef } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
+import { Link, useNavigate } from 'react-router-dom';
 import { userSignUp } from '../../redux/users/usersSlice';
 
 const SignUp = () => {
   const user = useSelector((state) => state.user);
   const dispatch = useDispatch();
+  const navigate = useNavigate();
   const formRef = useRef();
 
   const handleSubmit = (e) => {
+    e.preventDefault();
     const formData = new FormData(formRef.current);
     const data = Object.fromEntries(formData);
     const userInfo = {
@@ -20,7 +23,12 @@ const SignUp = () => {
     };
 
     dispatch(userSignUp(userInfo));
+    e.target.reset();
   };
+
+  if (user.isLogged) {
+    navigate('/rooms');
+  }
 
   return (
     <>
@@ -48,7 +56,7 @@ const SignUp = () => {
       </form>
       <div>
         Already got an account:
-        <a href="#login">Log In</a>
+        <Link to="/login">Log In</Link>
       </div>
     </>
   );
