@@ -33,11 +33,8 @@ const roomProp = [
   },
 ];
 
-export default function SelectInput(props) {
-  const {
-    onChange, label,
-  } = props;
-
+export default function SelectInput({onChange, label}) {
+  
   const roomOptions = roomProp.map((room) => ({ value: room.id, label: room.name }));
 
   return (
