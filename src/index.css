@@ -27,12 +27,6 @@
   }
 }
 
-.main-container {
-  width: 100%;
-  padding-top: 3rem;
-  position: relative;
-}
-
 @media screen and (min-width: 768px) {
   .main-container {
     width: calc(100% - 25%);
