@@ -2,11 +2,9 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import style from './css/Input.module.css';
 
-export default function NumberInput(props) {
-  const {
-    value, onChange, label, id,
-  } = props;
-
+export default function NumberInput({
+  value, onChange, label, id,
+}) {
   return (
     <div>
       <div>
@@ -22,7 +20,7 @@ export default function NumberInput(props) {
         id={id}
         value={value}
         min="1"
-        max="10"
+        max="20"
         onChange={(val) => onChange(val.target.value)}
       />
     </div>
