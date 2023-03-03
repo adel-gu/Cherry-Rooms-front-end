@@ -2,12 +2,12 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import style from './css/SubmitBtn.module.css';
 
-export default function Field({ onClick }) {
+export default function SubmitBtn({ onClick }) {
   return (
     <div className={style.btnContainer}>
       <button
         className={style.btn}
-        type="submit"
+        type="button"
         onClick={() => onClick()}
       >
         Reserve
@@ -16,6 +16,6 @@ export default function Field({ onClick }) {
   );
 }
 
-Field.propTypes = {
+SubmitBtn.propTypes = {
   onClick: PropTypes.func.isRequired,
 };
