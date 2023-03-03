@@ -8,7 +8,7 @@ import Login from './components/user/Login';
 
 const App = () => (
   <>
-    <Sidebar />
+    {/* <Sidebar /> */}
     <Routes>
       <Route path="/" element={<Splash />} />
       <Route path="/login" element={<Login />} />
