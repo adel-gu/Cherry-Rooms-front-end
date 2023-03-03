@@ -1,13 +1,12 @@
 .text {
   text-transform: uppercase;
-    color: var(--clr-light-blue);
-    font-size: .75rem;
-    color: hsl(213, 96%, 18%);
+  font-size: 0.75rem;
+  color: #fff;
 }
 
 .body {
   margin-top: 0.25rem;
-    font-weight: 700;
-    letter-spacing: 1px;
-    color: hsl(213, 96%, 18%);
+  font-weight: 700;
+  letter-spacing: 1px;
+  color: #fff;
 }
