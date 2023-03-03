@@ -2,8 +2,7 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import style from './css/Field.module.css';
 
-export default function Field(props) {
-  const { k, value } = props;
+export default function Field({ k, value }) {
   return (
     <li>
       <p className={style.text}>{`${k} :`}</p>
