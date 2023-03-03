@@ -10,7 +10,7 @@ export default function MyReservation() {
   const dispatch = useDispatch();
 
   useEffect(() => {
-    dispatch(fetchReservations());
+    // dispatch(fetchReservations());
   }, [dispatch]);
 
   const { loading, reservations } = useSelector((state) => ({ ...state.reservations }));
