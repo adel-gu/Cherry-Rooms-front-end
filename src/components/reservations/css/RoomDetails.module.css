@@ -1,16 +1,22 @@
 .container {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  border-radius: 12px;
-  /* align-items: center; */
-  gap: 2rem;
-  width: 20.125rem;
-  height: 35.5rem;
-  /* background-image: url(/frontend-mentor-multi-step-form/assets/images/bg-sidebar-desktop.svg); */
-  background-size: 100% 100%;
-  background-repeat: no-repeat;
-  padding: 2.5rem 2rem;
-  text-align: center;
-  color:#fff
+  display: none;
+}
+
+@media only screen and (min-width: 1024px) {
+  .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border-radius: 12px;
+    gap: 2rem;
+    width: 24.125rem;
+
+    /* height: 100%; */
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-blend-mode: overlay;
+    padding: 2.5rem 2rem;
+    text-align: center;
+    color: #fff;
+  }
 }
