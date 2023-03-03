@@ -31,32 +31,76 @@ const SignUp = () => {
   }
 
   return (
-    <div className="main-container">
-      <form ref={formRef} onSubmit={(e) => handleSubmit(e)}>
-        <ul>
-          <li>
-            <input type="text" name="f_name" placeholder="Full Name" required />
-          </li>
-          <li>
-            <input type="text" name="avatar" placeholder="Avatar" required />
-          </li>
-          <li>
-            <input type="email" name="email" placeholder="Email" required />
-          </li>
-          <li>
-            <input
-              type="password"
-              name="password"
-              placeholder="Password"
-              required
-            />
-          </li>
-          <button type="submit">Sign Up</button>
-        </ul>
-      </form>
-      <div>
-        Already got an account:
-        <Link to="/login">Log In</Link>
+    <div className="grid gap-0 grid-cols-2 grid-rows-1">
+      <div className="bg-decorative h-screen hidden md:block"></div>
+      <div className="w-screen md:w-auto h-screen flex flex-col items-center justify-between pb-8">
+        <div className="pt-8">
+          <div className="text-center">
+            <h1 className="text-4xl font-medium text-lime-400">SignUp</h1>
+            <p className="max-w-xs pt-6">
+              SignUp and start your rooms reservations all over the world
+            </p>
+          </div>
+          <form
+            ref={formRef}
+            onSubmit={(e) => handleSubmit(e)}
+            className="h-1/3 w-100 pt-8"
+          >
+            <ul>
+              <li>
+                <input
+                  type="text"
+                  name="f_name"
+                  placeholder="Full Name"
+                  required
+                  className="w-full my-3 focus:ring-lime-600 focus:outline-2 focus:border-transparent"
+                />
+              </li>
+              <li>
+                <input
+                  type="text"
+                  name="avatar"
+                  placeholder="Avatar"
+                  required
+                  className="w-full my-3 focus:ring-lime-600 focus:outline-2 focus:border-transparent"
+                />
+              </li>
+              <li>
+                <input
+                  type="email"
+                  name="email"
+                  placeholder="Email"
+                  required
+                  className="w-full my-3 focus:ring-lime-600 focus:outline-2 focus:border-transparent"
+                />
+              </li>
+              <li>
+                <input
+                  type="password"
+                  name="password"
+                  placeholder="Password"
+                  required
+                  className="w-full my-3 focus:ring-lime-600 focus:border-transparent"
+                />
+              </li>
+              <button
+                type="submit"
+                className="w-full bg-lime-500 text-white w-1/2 py-3 mx-auto mt-2 block hover:bg-lime-600"
+              >
+                SignUp
+              </button>
+            </ul>
+          </form>
+        </div>
+        <div>
+          Already got an account:
+          <Link
+            to="/login"
+            className="text-lime-600 font-medium underline hover:text-lime-700 ml-2"
+          >
+            Login
+          </Link>
+        </div>
       </div>
     </div>
   );
