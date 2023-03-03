@@ -6,7 +6,11 @@ module.exports = {
   ],
 
   theme: {
-    extend: {},
+    extend: {
+      colors: {
+        prime: '#97bf11',
+      },
+    },
   },
   // eslint-disable-next-line
   plugins: [require('flowbite/plugin')],
