@@ -30,8 +30,8 @@ const Login = () => {
 
   return (
     <div className="grid gap-0 grid-cols-2 grid-rows-1">
-      <div className="bg-decorative h-screen"></div>
-      <div className="h-screen flex flex-col items-center justify-between pt-20 pb-8">
+      <div className="bg-decorative h-screen hidden md:block"></div>
+      <div className="w-screen md:w-auto h-screen flex flex-col items-center justify-between pt-20 pb-8">
         <div className="text-center">
           <h1 className="text-4xl font-medium text-lime-400">Login</h1>
           <p className="max-w-xs pt-6">
