@@ -52,6 +52,7 @@ const SignUp = () => {
                   type="text"
                   name="f_name"
                   placeholder="Full Name"
+                  maxLength={50}
                   required
                   className="w-full my-3 focus:ring-lime-600 focus:outline-2 focus:border-transparent"
                 />
