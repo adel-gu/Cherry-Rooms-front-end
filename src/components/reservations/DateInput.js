@@ -4,11 +4,9 @@ import Flatpickr from 'react-flatpickr';
 import 'flatpickr/dist/themes/material_green.css';
 import style from './css/Input.module.css';
 
-export default function DateInput(props) {
-  const {
-    value, onChange, options, label, id,
-  } = props;
-
+export default function DateInput({
+  value, onChange, options, label, id,
+}) {
   return (
     <div>
       <div style={{ fontSize: '.875rem' }}>
@@ -21,7 +19,7 @@ export default function DateInput(props) {
       <Flatpickr
         className={style.input}
         id={id}
-        placeholder="Calander"
+        placeholder="Invalid"
         value={value}
         onChange={(date) => { onChange(date); }}
         options={options}
@@ -31,7 +29,7 @@ export default function DateInput(props) {
 }
 
 DateInput.propTypes = {
-  value: PropTypes.number.isRequired,
+  value: PropTypes.instanceOf(Date).isRequired,
   id: PropTypes.string.isRequired,
   onChange: PropTypes.func.isRequired,
   label: PropTypes.string.isRequired,
