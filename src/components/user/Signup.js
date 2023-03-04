@@ -32,7 +32,7 @@ const SignUp = () => {
 
   return (
     <div className="grid gap-0 grid-cols-2 grid-rows-1">
-      <div className="bg-decorative h-screen hidden md:block"></div>
+      <div className="bg-decorative h-screen hidden md:block" />
       <div className="w-screen md:w-auto h-screen flex flex-col items-center justify-between pb-8">
         <div className="pt-8">
           <div className="text-center">
