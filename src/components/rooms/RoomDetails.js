@@ -1,15 +1,26 @@
-import React from 'react';
-import { useSelector } from 'react-redux';
+import React, { useEffect } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
 import { useParams } from 'react-router-dom';
-import { selectAllRooms } from '../../redux/rooms/roomsSlice';
+import {
+  selectRoom,
+  getRoomStatus,
+  getSingleRoom,
+} from '../../redux/rooms/roomDetailSlice';
 import '../../styles/roomdetails.css';
 
 const RoomDetails = () => {
+  const dispatch = useDispatch();
   const { id } = useParams();
-  const rooms = useSelector(selectAllRooms);
 
-  const room = rooms.find((obj) => obj.id === id);
-  console.log(room);
+  const room = useSelector(selectRoom);
+  const roomStatus = useSelector(getRoomStatus);
+
+  useEffect(() => {
+    if (roomStatus === 'idle') {
+      dispatch(getSingleRoom(id));
+    }
+  }, [id, roomStatus, dispatch]);
+
   return (
     <div className="main-container">
       <div className="flex flex-col sm:flex-row px-8 sm:px-4 mt-8">
