@@ -5,6 +5,7 @@ import RoomDetails from './components/rooms/RoomDetails';
 import Splash from './pages/Splash';
 import SignUp from './components/user/Signup';
 import Login from './components/user/Login';
+import RoomForm from './components/rooms/RoomForm';
 
 const App = () => (
   <>
@@ -15,7 +16,7 @@ const App = () => (
       <Route path="/signup" element={<SignUp />} />
       <Route path="/rooms" element={<Rooms />} />
       <Route path="/rooms/:id" element={<RoomDetails />} />
-      <Route path="/rooms/:id" element={<RoomDetails />} />
+      <Route path="/rooms/create-room" element={<RoomForm />} />
     </Routes>
   </>
 );
