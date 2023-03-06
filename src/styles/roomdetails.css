@@ -1,6 +1,7 @@
 .room-details-ul li:nth-child(odd) {
   background-color: #e1e3e5;
 }
+
 .room-details-ul li:nth-child(even) {
   background-color: #fff;
 }
