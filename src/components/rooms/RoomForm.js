@@ -1,4 +1,35 @@
+import { useRef } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
+import { useNavigate } from 'react-router-dom';
+import { createRoom } from '../../redux/rooms/roomsSlice';
+
 const RoomForm = () => {
+  const { isRoomCreated } = useSelector((state) => ({ ...state.rooms }));
+  const formRef = useRef();
+  const dispatch = useDispatch();
+  const navigate = useNavigate();
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    const formData = new FormData(formRef.current);
+    const data = Object.fromEntries(formData);
+    const roomInfo = {
+      room: {
+        name: data.name,
+        image: data.image,
+        beds: data.beds,
+        price: data.price,
+        city: data.city,
+        description: data.description,
+      },
+    };
+
+    dispatch(createRoom(roomInfo));
+    e.target.reset();
+  };
+
+  if (isRoomCreated) navigate('/rooms');
+
   return (
     <div className="main-container">
       <div className="pt-24">
@@ -6,7 +37,11 @@ const RoomForm = () => {
           <h1 className="text-4xl font-medium text-lime-400">Create a Room</h1>
           <p className="pt-6">Add Room information...</p>
         </div>
-        <form className="md:w-1/2 px-10 md:px-0 mt-5 mx-auto">
+        <form
+          ref={formRef}
+          onSubmit={(e) => handleSubmit(e)}
+          className="md:w-1/2 px-10 md:px-0 mt-5 mx-auto"
+        >
           <ul>
             <li>
               <input
@@ -61,7 +96,7 @@ const RoomForm = () => {
                 placeholder="Room description..."
                 required
                 className="w-full my-3 focus:ring-lime-600 focus:border-transparent"
-              ></textarea>
+              />
             </li>
             <button
               type="submit"
