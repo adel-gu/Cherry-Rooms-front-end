@@ -76,6 +76,7 @@ export const createRoom = createAsyncThunk('create_room', async (roomInfo) => {
 const roomsSlice = createSlice({
   name: 'rooms',
   initialState: {
+    initialState,
     isRoomCreated: false,
   },
   reducers: {},
