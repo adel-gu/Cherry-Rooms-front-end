@@ -39,6 +39,16 @@ const roomProp = [
         'https://images.unsplash.com/photo-1565329921943-7e537b7a2ea9?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8c3VpdGVzfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=800&q=60',
     city: 'Paris',
   },
+  {
+    id: 3,
+    name: 'Luxury 3',
+    beds: 4,
+    price: 16.99,
+    description: 'Best room with good price',
+    image:
+        'https://images.unsplash.com/photo-1565329921943-7e537b7a2ea9?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8c3VpdGVzfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=800&q=60',
+    city: 'Paris',
+  },
 ];
 
 export default function ReservationCard() {
@@ -55,15 +65,15 @@ export default function ReservationCard() {
   const [numOfPersons, setNumOfPersons] = useState(1);
 
   const onClick = () => {
-    const data = {
+    const data = [roomId, {
       reservation: {
         from_date: new Date(fromDate).toLocaleDateString(),
         to_date: new Date(toDate).toLocaleDateString(),
-        number_of_persons: numOfPersons,
-      },
-    };
-    console.log(data);
-    // dispatch(createReservation(roomId, data));
+        number_of_persons: numOfPersons
+      }
+    }];
+    console.log(JSON.stringify(data));
+    dispatch(createReservation(data));
   };
 
   return (
