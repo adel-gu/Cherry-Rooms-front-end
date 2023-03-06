@@ -1,4 +1,6 @@
-import { createSlice } from '@reduxjs/toolkit';
+import { createAsyncThunk, createSlice } from '@reduxjs/toolkit';
+
+const CREATE_ROOM_URL = 'http://localhost:3000/api/v1/rooms';
 
 const initialState = [
   {
@@ -57,11 +59,34 @@ const initialState = [
     city: 'Los Angeles',
   },
 ];
+export const createRoom = createAsyncThunk('create_room', async (roomInfo) => {
+  const res = fetch(CREATE_ROOM_URL, {
+    method: 'post',
+    headers: {
+      'content-type': 'application/json',
+      authorization: localStorage.getItem('token'),
+    },
+    body: JSON.stringify(roomInfo),
+  });
+  const data = (await res).json();
+  console.log(await data);
+  return data;
+});
 
 const roomsSlice = createSlice({
   name: 'rooms',
-  initialState,
+  initialState: {
+    isRoomCreated: false,
+  },
   reducers: {},
+  extraReducers: (builder) => {
+    builder.addCase(createRoom.fulfilled, (state, action) => {
+      return {
+        ...state,
+        isRoomCreated: action.payload.status.success,
+      };
+    });
+  },
 });
 
 // export const { postAdded } = postsSlice.actions;
