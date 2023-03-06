@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { useParams } from 'react-router-dom';
+import { useNavigate, useParams } from 'react-router-dom';
 import {
   selectRoom,
   getRoomStatus,
@@ -11,10 +11,10 @@ import '../../styles/roomdetails.css';
 const RoomDetails = () => {
   const dispatch = useDispatch();
   const { id } = useParams();
+  const navigate = useNavigate();
 
   const room = useSelector(selectRoom);
   const roomStatus = useSelector(getRoomStatus);
-
   useEffect(() => {
     if (roomStatus === 'idle') {
       dispatch(getSingleRoom(id));
@@ -49,6 +49,7 @@ const RoomDetails = () => {
           <button
             type="button"
             className="bg-prime py-2 px-4 item self-end text-white rounded-full mt-8"
+            onClick={() => navigate(`/rooms/${room.id}/reservation`)}
           >
             Reserve
           </button>
