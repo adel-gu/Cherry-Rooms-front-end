@@ -26,3 +26,13 @@
     right: 0;
   }
 }
+
+@media screen and (min-width: 768px) {
+  .main-container {
+    width: calc(100% - 25%);
+    left: 25%;
+    position: relative;
+    padding-top: 3rem;
+    right: 0;
+  }
+}

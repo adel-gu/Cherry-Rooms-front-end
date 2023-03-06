@@ -1,0 +1,14 @@
+.btnContainer {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.btn {
+  background-color: rgb(151 191 17);
+  color: #fff;
+  font-size: 1rem;
+  font-weight: 500;
+  padding: 0.875rem 1.5rem 1rem;
+  border-radius: 0.5rem;
+  cursor: pointer;
+}
