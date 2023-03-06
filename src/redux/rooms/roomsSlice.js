@@ -80,12 +80,10 @@ const roomsSlice = createSlice({
   },
   reducers: {},
   extraReducers: (builder) => {
-    builder.addCase(createRoom.fulfilled, (state, action) => {
-      return {
-        ...state,
-        isRoomCreated: action.payload.status.success,
-      };
-    });
+    builder.addCase(createRoom.fulfilled, (state, action) => ({
+      ...state,
+      isRoomCreated: action.payload.status.success,
+    }));
   },
 });
 
