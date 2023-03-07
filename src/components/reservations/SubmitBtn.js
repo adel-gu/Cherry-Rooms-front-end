@@ -5,11 +5,7 @@ import style from './css/SubmitBtn.module.css';
 export default function SubmitBtn({ onClick }) {
   return (
     <div className={style.btnContainer}>
-      <button
-        className={style.btn}
-        type="button"
-        onClick={() => onClick()}
-      >
+      <button className={style.btn} type="button" onClick={() => onClick()}>
         Reserve
       </button>
     </div>

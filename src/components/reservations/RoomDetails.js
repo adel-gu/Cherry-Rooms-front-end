@@ -8,13 +8,15 @@ export default function RoomDetails({ room }) {
     <ul
       className={style.container}
       style={{
-        backgroundImage: `url(${room.image})`,
+        backgroundImage: `url(${room?.image})`,
         backgroundColor: 'rgba(18, 23, 37, 0.6)',
       }}
     >
-      { Object.entries(room).map(([k, v]) => (k !== 'image' && k !== 'id' && k !== 'reservations'
-        ? <Field key={k} k={k} value={v} />
-        : null)) }
+      {Object.entries(room || []).map(([k, v]) =>
+        k !== 'image' && k !== 'id' && k !== 'reservations' ? (
+          <Field key={k} k={k} value={v} />
+        ) : null,
+      )}
     </ul>
   );
 }
