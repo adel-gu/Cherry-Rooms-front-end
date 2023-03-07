@@ -17,6 +17,11 @@
   position: relative;
 }
 
+.bg-decorative {
+  background: url("https://images.unsplash.com/photo-1565182999561-18d7dc61c393?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80") no-repeat;
+  background-size: cover;
+}
+
 @media screen and (min-width: 768px) {
   .main-container {
     width: calc(100% - 25%);
