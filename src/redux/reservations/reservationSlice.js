@@ -97,7 +97,7 @@ const reservationSlice = createSlice({
   reducers: {},
   extraReducers(builder) {
     builder
-      .addCase(fetchReservations.pending, (state) => ({ loading: 'Loading Api' }))
+      .addCase(fetchReservations.pending, (state) => ({ ...state, loading: 'Loading Api' }))
       .addCase(fetchReservations.fulfilled, (state, action) => ({ ...state, loading: 'api loaded', reservations: action.payload }))
       .addCase(fetchReservations.rejected, (state) => ({ ...state, loading: 'Failed to load Api.' }));
   },

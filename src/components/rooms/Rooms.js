@@ -32,8 +32,8 @@ const Rooms = () => {
         navigation
         pagination={{ clickable: true }}
         scrollbar={{ draggable: true }}
-        onSwiper={(swiper) => console.log(swiper)}
-        onSlideChange={() => console.log('slide change')}
+        onSwiper={() => {}}
+        onSlideChange={() => {}}
         breakpoints={{
           640: {
             slidesPerView: 2,

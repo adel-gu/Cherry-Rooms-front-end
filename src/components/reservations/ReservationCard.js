@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { useParams } from 'react-router-dom';
-import { useSelector, useDispatch } from 'react-redux';
+import { useDispatch } from 'react-redux';
 import DateInput from './DateInput';
 import RoomDetails from './RoomDetails';
 import NumberInput from './NumberInput';
@@ -62,8 +62,7 @@ export default function ReservationCard() {
         number_of_persons: numOfPersons,
       },
     };
-    console.log(data);
-    // dispatch(createReservation(roomId, data));
+    dispatch(createReservation(roomId, data));
   };
 
   return (
