@@ -13,6 +13,15 @@ export const getRooms = createAsyncThunk('rooms/getRooms', async () => {
   return response.data;
 });
 
+export const removeRoom = createAsyncThunk('rooms/removeRoom', async (id) => {
+  await axios.delete(`${FETCH_ROOMS}/${id}`, {
+    headers: {
+      Authorization: localStorage.getItem('token'),
+    },
+  });
+  return id;
+});
+
 const initialState = {
   rooms: [],
   status: 'idle',
@@ -38,7 +47,14 @@ const roomsSlice = createSlice({
         ...state,
         status: 'failed',
         error: action.error.message,
-      }));
+      }))
+      .addCase(removeRoom.fulfilled, (state, action) => {
+        const rooms = state.rooms.filter((room) => room.id !== action.payload);
+        return {
+          ...state,
+          rooms,
+        };
+      });
   },
 });
 
