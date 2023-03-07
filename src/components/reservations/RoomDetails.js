@@ -5,8 +5,8 @@ import style from './css/RoomDetails.module.css';
 
 export default function RoomDetails({ room }) {
   return (
-    <ul className={style.container} style={{ backgroundImage: `url(${room.image})`, backgroundColor: 'rgba(18, 23, 37, 0.6)' }}>
-      { Object.entries(room).map(([k, v]) => (k !== 'image' && k !== 'id' ? <Field key={k} k={k} value={v} /> : null)) }
+    <ul className={style.container} style={{ backgroundImage: `url(${room?.image})`, backgroundColor: 'rgba(18, 23, 37, 0.6)' }}>
+      { Object.entries(room || []).map(([k, v]) => (k !== 'image' && k !== 'id' ? <Field key={k} k={k} value={v} /> : null)) }
     </ul>
   );
 }
