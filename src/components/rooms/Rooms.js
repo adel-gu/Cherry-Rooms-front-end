@@ -43,6 +43,8 @@ const Rooms = () => {
         navigation
         pagination={{ clickable: true }}
         scrollbar={{ draggable: true }}
+        onSwiper={() => {}}
+        onSlideChange={() => {}}
         breakpoints={{
           640: {
             slidesPerView: 2,
