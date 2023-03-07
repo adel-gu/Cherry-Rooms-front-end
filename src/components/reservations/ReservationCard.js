@@ -1,11 +1,6 @@
 import React, { useState } from 'react';
-<<<<<<< HEAD
 import { useParams, useNavigate } from 'react-router-dom';
 import { useSelector, useDispatch } from 'react-redux';
-=======
-import { useParams } from 'react-router-dom';
-import { useDispatch } from 'react-redux';
->>>>>>> dev
 import DateInput from './DateInput';
 import RoomDetails from './RoomDetails';
 import NumberInput from './NumberInput';
