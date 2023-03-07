@@ -10,6 +10,7 @@ const initialState = {
   rooms: [],
   status: 'idle',
   error: null,
+  isRoomCreated: false,
 };
 
 export const createRoom = createAsyncThunk('create_room', async (roomInfo) => {
@@ -37,12 +38,8 @@ export const getRooms = createAsyncThunk('rooms/getRooms', async () => {
 
 const roomsSlice = createSlice({
   name: 'rooms',
-  initialState: {
-    initialState,
-    isRoomCreated: false,
-  },
+  initialState,
   reducers: {},
-
   extraReducers: (builder) => {
     builder
       .addCase(createRoom.fulfilled, (state, action) => ({
