@@ -1,11 +1,16 @@
-import { configureStore } from '@reduxjs/toolkit';
+import { configureStore, applyMiddleware } from '@reduxjs/toolkit';
+import thunk from 'redux-thunk';
 import roomsReducer from './rooms/roomsSlice';
-import reservationReducer from './reservations/reservationSlice';
+import reservations from './reservations/reservationSlice';
 
-const store = configureStore({
-  reducer: {
-    rooms: roomsReducer,
-    reservations: reservationReducer,
+const store = configureStore(
+  {
+    reducer: {
+      rooms: roomsReducer,
+      reservations,
+    },
   },
-});
+  applyMiddleware(thunk),
+);
+
 export default store;
