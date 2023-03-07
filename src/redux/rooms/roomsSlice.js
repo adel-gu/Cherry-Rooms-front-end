@@ -23,7 +23,6 @@ export const createRoom = createAsyncThunk('create_room', async (roomInfo) => {
     body: JSON.stringify(roomInfo),
   });
   const data = (await res).json();
-  console.log(await data);
   return data;
 });
 
@@ -44,12 +43,6 @@ export const removeRoom = createAsyncThunk('rooms/removeRoom', async (id) => {
   });
   return id;
 });
-
-const initialState = {
-  rooms: [],
-  status: 'idle',
-  error: null,
-};
 
 const roomsSlice = createSlice({
   name: 'rooms',
