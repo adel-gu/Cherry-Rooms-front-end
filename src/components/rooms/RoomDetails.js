@@ -15,7 +15,6 @@ const RoomDetails = () => {
 
   const room = useSelector(selectRoom);
   const roomStatus = useSelector(getRoomStatus);
-
   useEffect(() => {
     if (roomStatus === 'idle') {
       dispatch(getSingleRoom(id));
