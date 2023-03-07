@@ -1,8 +1,8 @@
 import PropTypes from 'prop-types';
 import React from 'react';
 import Flatpickr from 'react-flatpickr';
-import 'flatpickr/dist/themes/material_green.css';
 import style from './css/Input.module.css';
+import 'flatpickr/dist/themes/material_green.css';
 
 export default function DateInput({
   value, onChange, options, label, id,
@@ -29,9 +29,15 @@ export default function DateInput({
 }
 
 DateInput.propTypes = {
-  value: PropTypes.instanceOf(Date).isRequired,
+  value: PropTypes.oneOfType([
+    PropTypes.arrayOf(PropTypes.instanceOf(Date)),
+    PropTypes.objectOf(PropTypes.instanceOf(Date)),
+  ]).isRequired,
   id: PropTypes.string.isRequired,
   onChange: PropTypes.func.isRequired,
   label: PropTypes.string.isRequired,
-  options: PropTypes.objectOf(PropTypes.string).isRequired,
+  options: PropTypes.exact({
+    minDate: PropTypes.instanceOf(Date),
+    dateFormat: PropTypes.string,
+  }).isRequired,
 };
