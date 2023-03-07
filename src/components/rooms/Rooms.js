@@ -1,11 +1,14 @@
-import { React } from 'react';
-import { useSelector } from 'react-redux';
-
+import React, { useEffect } from 'react';
+import { useSelector, useDispatch } from 'react-redux';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation, Pagination, Scrollbar } from 'swiper';
 import { Link } from 'react-router-dom';
 
-import { selectAllRooms } from '../../redux/rooms/roomsSlice';
+import {
+  selectAllRooms,
+  getRooms,
+  getRoomsStatus,
+} from '../../redux/rooms/roomsSlice';
 import '../../styles/rooms.css';
 
 // Import Swiper styles
@@ -14,7 +17,15 @@ import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 
 const Rooms = () => {
+  const dispatch = useDispatch();
   const rooms = useSelector(selectAllRooms);
+  const roomsStatus = useSelector(getRoomsStatus);
+
+  useEffect(() => {
+    if (roomsStatus === 'idle') {
+      dispatch(getRooms());
+    }
+  }, [roomsStatus, dispatch]);
 
   return (
     <div className="main-container ">
@@ -32,8 +43,6 @@ const Rooms = () => {
         navigation
         pagination={{ clickable: true }}
         scrollbar={{ draggable: true }}
-        onSwiper={(swiper) => console.log(swiper)}
-        onSlideChange={() => console.log('slide change')}
         breakpoints={{
           640: {
             slidesPerView: 2,

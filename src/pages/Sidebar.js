@@ -47,7 +47,7 @@ const Sidebar = () => {
 
           <nav aria-label="Main Nav" className="mt-6 flex flex-col space-y-1">
             <NavLink
-              to="/"
+              to="/rooms"
               className="flex items-center gap-2 rounded-lg hover:bg-prime hover:text-white px-4 py-2 text-gray-500"
             >
               <span>
@@ -57,7 +57,7 @@ const Sidebar = () => {
             </NavLink>
 
             <NavLink
-              to="/"
+              to="#"
               className="flex items-center cursor-pointer gap-2 rounded-lg hover:bg-prime hover:text-white px-4 py-2 text-gray-500"
             >
               <span>
@@ -67,7 +67,7 @@ const Sidebar = () => {
             </NavLink>
 
             <NavLink
-              to="/"
+              to="#"
               className="flex items-center cursor-pointer gap-2 rounded-lg hover:bg-prime hover:text-white px-4 py-2 text-gray-500"
             >
               <span>
@@ -76,7 +76,7 @@ const Sidebar = () => {
               <span>Reserve a Room</span>
             </NavLink>
             <NavLink
-              to="/"
+              to="#"
               className="flex items-center cursor-pointer gap-2 rounded-lg hover:bg-prime hover:text-white px-4 py-2 text-gray-500"
             >
               <span>
@@ -86,7 +86,7 @@ const Sidebar = () => {
             </NavLink>
 
             <NavLink
-              to="/"
+              to="#"
               className="flex items-center cursor-pointer gap-2 rounded-lg hover:bg-prime hover:text-white px-4 py-2 text-gray-500"
             >
               <span>
@@ -99,7 +99,7 @@ const Sidebar = () => {
 
         <div className="px-4 flex flex-col space-y-1">
           <NavLink
-            to="/"
+            to="#"
             className="flex items-center cursor-pointer gap-2 rounded-lg hover:bg-prime hover:text-white px-4 py-2 text-gray-500"
           >
             <span>
@@ -108,7 +108,7 @@ const Sidebar = () => {
             <span>Sign up</span>
           </NavLink>
           <NavLink
-            to="/"
+            to="#"
             className="flex items-center cursor-pointer gap-2 rounded-lg hover:bg-prime hover:text-white px-4 py-2 text-gray-500"
           >
             <span>
@@ -120,7 +120,7 @@ const Sidebar = () => {
 
         <div className="sticky inset-x-0 bottom-0 border-t border-gray-100">
           <NavLink
-            to="/"
+            to="#"
             className="flex items-center gap-2 bg-white p-4 hover:bg-gray-50"
           >
             <img
