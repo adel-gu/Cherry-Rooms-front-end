@@ -69,7 +69,7 @@ const userSlice = createSlice({
   initialState: {
     message: '',
     data: {},
-    current_user: null,
+    currentUser: null,
     isLogged: false,
   },
   extraReducers: (builder) => {
@@ -93,11 +93,11 @@ const userSlice = createSlice({
     }));
     builder.addCase(getCurrentUser.fulfilled, (state, action) => ({
       ...state,
-      current_user: action.payload.data,
+      currentUser: action.payload.data,
     }));
     builder.addCase(getCurrentUser.rejected, (state, action) => ({
       ...state,
-      current_user: null,
+      currentUser: null,
     }));
   },
 });
