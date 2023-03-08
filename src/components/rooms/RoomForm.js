@@ -10,7 +10,6 @@ const RoomForm = () => {
   const navigate = useNavigate();
 
   const handleSubmit = (e) => {
-    e.preventDefault();
     const formData = new FormData(formRef.current);
     const data = Object.fromEntries(formData);
     const roomInfo = {
@@ -25,10 +24,10 @@ const RoomForm = () => {
     };
 
     dispatch(createRoom(roomInfo));
-    e.target.reset();
+    navigate('/rooms');
   };
 
-  if (isRoomCreated) navigate('/rooms');
+  // if (isRoomCreated)
 
   return (
     <div className="main-container">
