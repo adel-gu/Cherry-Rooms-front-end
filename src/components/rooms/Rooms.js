@@ -4,11 +4,7 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation, Pagination, Scrollbar } from 'swiper';
 import { Link } from 'react-router-dom';
 
-import {
-  selectAllRooms,
-  getRooms,
-  getRoomsStatus,
-} from '../../redux/rooms/roomsSlice';
+import { selectAllRooms, getRooms } from '../../redux/rooms/roomsSlice';
 import '../../styles/rooms.css';
 
 // Import Swiper styles

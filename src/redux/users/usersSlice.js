@@ -95,7 +95,7 @@ const userSlice = createSlice({
       ...state,
       currentUser: action.payload.data,
     }));
-    builder.addCase(getCurrentUser.rejected, (state, action) => ({
+    builder.addCase(getCurrentUser.rejected, (state) => ({
       ...state,
       currentUser: null,
     }));

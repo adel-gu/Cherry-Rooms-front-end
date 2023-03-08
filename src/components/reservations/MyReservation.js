@@ -36,8 +36,8 @@ export default function MyReservation() {
             </p>
           </div>
           <ul className="grid-list">
-            {reservations &&
-              reservations.map((res) => (
+            {reservations
+              && reservations.map((res) => (
                 <li key={res.id}>
                   <div className="project-card">
                     <figure className="img-holder">

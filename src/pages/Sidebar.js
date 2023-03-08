@@ -6,7 +6,6 @@ import {
   AiFillDelete,
   AiFillHome,
   AiFillBank,
-  AiOutlineLogin,
 } from 'react-icons/ai';
 import { BiLogOutCircle } from 'react-icons/bi';
 import { HiMenu } from 'react-icons/hi';
@@ -130,7 +129,7 @@ const Sidebar = () => {
             className="flex items-center gap-2 bg-white p-4 hover:bg-gray-50"
           >
             <img
-              alt={!currentUser ? '' : currentUser.f_name + 'Avatar'}
+              alt={!currentUser ? '' : `${currentUser.f_name}Avatar`}
               src={!currentUser ? '' : currentUser.avatar}
               className="h-10 w-10 rounded-full object-cover"
             />
@@ -141,7 +140,11 @@ const Sidebar = () => {
                   {!currentUser ? '' : currentUser.f_name}
                 </strong>
 
-                <span> {!currentUser ? '' : currentUser.email} </span>
+                <span>
+                  {' '}
+                  {!currentUser ? '' : currentUser.email}
+                  {' '}
+                </span>
               </p>
             </div>
           </NavLink>

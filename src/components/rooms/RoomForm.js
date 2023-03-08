@@ -9,7 +9,7 @@ const RoomForm = () => {
   const dispatch = useDispatch();
   const navigate = useNavigate();
 
-  const handleSubmit = (e) => {
+  const handleSubmit = () => {
     const formData = new FormData(formRef.current);
     const data = Object.fromEntries(formData);
     const roomInfo = {
@@ -40,7 +40,7 @@ const RoomForm = () => {
           </div>
           <form
             ref={formRef}
-            onSubmit={(e) => handleSubmit(e)}
+            onSubmit={handleSubmit}
             className="md:w-1/2 px-10 md:px-0 mt-5 mx-auto"
           >
             <ul>

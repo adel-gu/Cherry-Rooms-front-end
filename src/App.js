@@ -1,5 +1,7 @@
 import { Routes, Route, useNavigate } from 'react-router-dom';
 
+import { useEffect } from 'react';
+import { useDispatch } from 'react-redux';
 import ReservationCard from './components/reservations/ReservationCard';
 import MyReservation from './components/reservations/MyReservation';
 import Rooms from './components/rooms/Rooms';
@@ -9,17 +11,11 @@ import SignUp from './components/user/Signup';
 import Login from './components/user/Login';
 import DeleteRoom from './components/rooms/DeleteRoom';
 import RoomForm from './components/rooms/RoomForm';
-import { useEffect } from 'react';
-import { useDispatch } from 'react-redux';
 import { getCurrentUser } from './redux/users/usersSlice';
 
 const App = () => {
   const dispatch = useDispatch();
   const navigate = useNavigate();
-
-  useEffect(() => {
-    isUserAuthenticated();
-  }, [dispatch]);
 
   const isUserAuthenticated = () => {
     const token = localStorage.getItem('token');
@@ -31,6 +27,10 @@ const App = () => {
       });
     }
   };
+
+  useEffect(() => {
+    isUserAuthenticated();
+  }, [dispatch]);
 
   return (
     <>
