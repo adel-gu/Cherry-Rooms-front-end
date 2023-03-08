@@ -23,12 +23,13 @@ const App = () => {
 
   const isUserAuthenticated = () => {
     const token = localStorage.getItem('token');
-    let currentUser = null;
     if (token) {
       dispatch(getCurrentUser()).then((res) => {
-        currentUser = res.payload.data;
+        const currentUser = res.payload.data;
+        if (!currentUser) navigate('/');
+        if (currentUser && window.location.pathname === '/') navigate('rooms');
       });
-    } else if (!(token && currentUser)) navigate('/');
+    }
   };
 
   return (
