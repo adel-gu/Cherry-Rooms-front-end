@@ -19,13 +19,10 @@ import 'swiper/css/pagination';
 const Rooms = () => {
   const dispatch = useDispatch();
   const rooms = useSelector(selectAllRooms);
-  const roomsStatus = useSelector(getRoomsStatus);
 
   useEffect(() => {
-    if (roomsStatus === 'idle') {
-      dispatch(getRooms());
-    }
-  }, [roomsStatus, dispatch]);
+    dispatch(getRooms());
+  }, []);
 
   return (
     <div className="main-container ">
