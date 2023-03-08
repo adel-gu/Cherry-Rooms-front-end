@@ -1,10 +1,9 @@
 import { useRef } from 'react';
-import { useDispatch, useSelector } from 'react-redux';
+import { useDispatch } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
 import { createRoom } from '../../redux/rooms/roomsSlice';
 
 const RoomForm = () => {
-  const { isRoomCreated } = useSelector((state) => ({ ...state.rooms }));
   const formRef = useRef();
   const dispatch = useDispatch();
   const navigate = useNavigate();
@@ -26,8 +25,6 @@ const RoomForm = () => {
     dispatch(createRoom(roomInfo));
     navigate('/rooms');
   };
-
-  // if (isRoomCreated)
 
   return (
     <div className="main-container">
