@@ -1,6 +1,6 @@
-import { useState, useEffect } from 'react';
-import { useDispatch, useSelector } from 'react-redux';
-import { getCurrentUser, userLogout } from '../redux/users/usersSlice';
+import { useState } from 'react';
+import { useDispatch } from 'react-redux';
+import { userLogout } from '../redux/users/usersSlice';
 import { FaSwatchbook } from 'react-icons/fa';
 import {
   AiFillDatabase,
@@ -11,8 +11,8 @@ import {
 } from 'react-icons/ai';
 import { BiLogOutCircle } from 'react-icons/bi';
 import { HiMenu } from 'react-icons/hi';
-import { NavLink, useNavigate } from 'react-router-dom';
-import { RiLoginCircleFill, RiCloseLine } from 'react-icons/ri';
+import { NavLink } from 'react-router-dom';
+import { RiCloseLine } from 'react-icons/ri';
 import '../styles/sidebar.css';
 
 const Sidebar = () => {

@@ -1,5 +1,5 @@
 import { Routes, Route, useNavigate } from 'react-router-dom';
-import Sidebar from './pages/Sidebar';
+
 import ReservationCard from './components/reservations/ReservationCard';
 import MyReservation from './components/reservations/MyReservation';
 import Rooms from './components/rooms/Rooms';
@@ -34,7 +34,6 @@ const App = () => {
 
   return (
     <>
-      <Sidebar />
       <Routes>
         <Route path="/" element={<Splash />} />
         <Route path="/login" element={<Login />} />
