@@ -34,8 +34,8 @@ const SignUp = () => {
     <div className="grid gap-0 grid-cols-2 grid-rows-1">
       <div className="bg-decorative h-screen hidden md:block" />
       <div className="w-screen md:w-auto h-screen flex flex-col items-center justify-between pb-8">
-        <div className="pt-8">
-          <div className="text-center">
+        <div className="pt-8 w-1/2">
+          <div className="text-center flex flex-col items-center mt-8">
             <h1 className="text-4xl font-medium text-lime-400">SignUp</h1>
             <p className="max-w-xs pt-6">
               SignUp and start your rooms reservations all over the world
@@ -44,7 +44,7 @@ const SignUp = () => {
           <form
             ref={formRef}
             onSubmit={(e) => handleSubmit(e)}
-            className="h-1/3 w-100 pt-8"
+            className="h-1/3 w-100 pt-8 mt-24"
           >
             <ul>
               <li>

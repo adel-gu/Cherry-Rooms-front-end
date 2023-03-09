@@ -1,21 +1,34 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
 import { FaSwatchbook } from 'react-icons/fa';
 import {
   AiFillDatabase,
   AiFillDelete,
   AiFillHome,
   AiFillBank,
-  AiOutlineLogin,
 } from 'react-icons/ai';
+import { BiLogOutCircle } from 'react-icons/bi';
 import { HiMenu } from 'react-icons/hi';
 import { NavLink } from 'react-router-dom';
-import { RiLoginCircleFill, RiCloseLine } from 'react-icons/ri';
+import { RiCloseLine } from 'react-icons/ri';
+import { getCurrentUser, userLogout } from '../redux/users/usersSlice';
 import '../styles/sidebar.css';
 
 const Sidebar = () => {
+  const currentUser = useSelector((state) => state.user.currentUser);
   const [navHide, setNavHide] = useState(false);
-
   const displayHideNavbar = () => setNavHide(!navHide);
+
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+    dispatch(getCurrentUser());
+  }, [dispatch]);
+
+  const handleClick = () => {
+    dispatch(userLogout());
+  };
+  console.log(currentUser);
 
   return (
     <>
@@ -99,22 +112,14 @@ const Sidebar = () => {
 
         <div className="px-4 flex flex-col space-y-1">
           <NavLink
-            to="#"
+            to="/"
             className="flex items-center cursor-pointer gap-2 rounded-lg hover:bg-prime hover:text-white px-4 py-2 text-gray-500"
+            onClick={handleClick}
           >
             <span>
-              <AiOutlineLogin />
+              <BiLogOutCircle />
             </span>
-            <span>Sign up</span>
-          </NavLink>
-          <NavLink
-            to="#"
-            className="flex items-center cursor-pointer gap-2 rounded-lg hover:bg-prime hover:text-white px-4 py-2 text-gray-500"
-          >
-            <span>
-              <RiLoginCircleFill />
-            </span>
-            <span>Log In</span>
+            <span>Logout</span>
           </NavLink>
         </div>
 
@@ -124,16 +129,22 @@ const Sidebar = () => {
             className="flex items-center gap-2 bg-white p-4 hover:bg-gray-50"
           >
             <img
-              alt="Man"
-              src="https://images.unsplash.com/photo-1600486913747-55e5470d6f40?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80"
+              alt={!currentUser ? '' : `${currentUser.f_name}Avatar`}
+              src={!currentUser ? '' : currentUser.avatar}
               className="h-10 w-10 rounded-full object-cover"
             />
 
             <div>
               <p className="text-xs">
-                <strong className="block font-medium">Eric Frusciante</strong>
+                <strong className="block font-medium">
+                  {!currentUser ? '' : currentUser.f_name}
+                </strong>
 
-                <span> eric@frusciante.com </span>
+                <span>
+                  {' '}
+                  {!currentUser ? '' : currentUser.email}
+                  {' '}
+                </span>
               </p>
             </div>
           </NavLink>

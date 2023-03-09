@@ -3,6 +3,8 @@ import { createAsyncThunk, createSlice } from '@reduxjs/toolkit';
 const SIGNUP_URL = 'http://localhost:3000/signup';
 const LOGIN_URL = 'http://localhost:3000/login';
 const LOGOUT_URL = 'http://localhost:3000/logout';
+const CURRENT_USER_URL = 'http://localhost:3000/api/v1/current_user';
+const GET_USER_SESSION = 'current_user_session';
 const USER_SIGNED = 'user_signup';
 const USER_LOGGED = 'user_login';
 const USER_LOGGEDOUT = 'user_loggedout';
@@ -48,11 +50,26 @@ export const userLogout = createAsyncThunk(USER_LOGGEDOUT, async () => {
   return data;
 });
 
+// Current User
+
+export const getCurrentUser = createAsyncThunk(GET_USER_SESSION, async () => {
+  const res = fetch(CURRENT_USER_URL, {
+    method: 'get',
+    headers: {
+      'content-type': 'application/json',
+      authorization: localStorage.getItem('token'),
+    },
+  });
+  const data = (await res).json();
+  return data;
+});
+
 const userSlice = createSlice({
   name: 'users',
   initialState: {
     message: '',
     data: {},
+    currentUser: null,
     isLogged: false,
   },
   extraReducers: (builder) => {
@@ -73,6 +90,14 @@ const userSlice = createSlice({
       message: action.payload.message,
       data: {},
       isLogged: false,
+    }));
+    builder.addCase(getCurrentUser.fulfilled, (state, action) => ({
+      ...state,
+      currentUser: action.payload.data,
+    }));
+    builder.addCase(getCurrentUser.rejected, (state) => ({
+      ...state,
+      currentUser: null,
     }));
   },
 });

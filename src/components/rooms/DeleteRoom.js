@@ -2,6 +2,7 @@ import React from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { removeRoom, selectAllRooms } from '../../redux/rooms/roomsSlice';
 import '../../styles/roomdetails.css';
+import Sidebar from '../../pages/Sidebar';
 
 const DeleteRoom = () => {
   const dispatch = useDispatch();
@@ -23,17 +24,20 @@ const DeleteRoom = () => {
   ));
 
   return (
-    <div className="main-container">
-      <div className="flex flex-col justify-center items-center">
-        <h1 className="text-center text-2xl font-extrabold text-gray-800 tracking-widest mb-3">
-          Delete Room
-        </h1>
-        <p className="text-sm text-zinc-500">
-          Please select a Room from this list to delete it
-        </p>
+    <>
+      <Sidebar />
+      <div className="main-container">
+        <div className="flex flex-col justify-center items-center">
+          <h1 className="text-center text-2xl font-extrabold text-gray-800 tracking-widest mb-3">
+            Delete Room
+          </h1>
+          <p className="text-sm text-zinc-500">
+            Please select a Room from this list to delete it
+          </p>
+        </div>
+        <ul className="room-details-ul shadow-lg mx-4 mt-4">{roomslist}</ul>
       </div>
-      <ul className="room-details-ul shadow-lg mx-4 mt-4">{roomslist}</ul>
-    </div>
+    </>
   );
 };
 
