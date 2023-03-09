@@ -13,10 +13,7 @@
   display: flex;
   flex-direction: row;
   padding: 1rem;
-  background-color: rgb(233, 236, 233);
   border-radius: 15px;
-
-  /* box-shadow: 0 25px 40px -20px hsla(0, 0%, 0%, 0.094); */
 }
 
 .innerContainer {
