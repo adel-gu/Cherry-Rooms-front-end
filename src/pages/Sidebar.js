@@ -15,7 +15,7 @@ import { getCurrentUser, userLogout } from '../redux/users/usersSlice';
 import '../styles/sidebar.css';
 
 const Sidebar = () => {
-  const currentUser = useSelector((state) => state.user.currentUser);
+  const { currentUser } = useSelector((state) => ({ ...state.user }));
   const [navHide, setNavHide] = useState(false);
   const displayHideNavbar = () => setNavHide(!navHide);
 
@@ -39,11 +39,9 @@ const Sidebar = () => {
         <HiMenu className="text-2xl" />
       </button>
       <div
-        className={
-          navHide
-            ? 'sidebar flex h-screen flex-col absolute justify-between border-r bg-white'
-            : 'sidebar-hidden flex h-screen flex-col absolute justify-between border-r'
-        }
+        className={`sidebar flex h-screen flex-col absolute justify-between border-r ${
+          navHide ? 'bg-white' : 'sidebar-hidden'
+        }`}
       >
         <button
           type="button"
@@ -139,11 +137,7 @@ const Sidebar = () => {
                   {!currentUser ? '' : currentUser.f_name}
                 </strong>
 
-                <span>
-                  {' '}
-                  {!currentUser ? '' : currentUser.email}
-                  {' '}
-                </span>
+                <span> {!currentUser ? '' : currentUser.email} </span>
               </p>
             </div>
           </NavLink>
