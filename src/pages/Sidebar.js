@@ -28,7 +28,6 @@ const Sidebar = () => {
   const handleClick = () => {
     dispatch(userLogout());
   };
-  console.log(currentUser);
 
   return (
     <>
