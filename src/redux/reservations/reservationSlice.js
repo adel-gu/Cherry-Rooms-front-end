@@ -1,6 +1,6 @@
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
 
-const URL = 'http://localhost:3000/api/v1/';
+const URL = 'https://cherry-room-service.onrender.com/api/v1/';
 
 export const fetchReservations = createAsyncThunk('cherry/fetch', async () => {
   const res = await fetch(`${URL}reservations`, {

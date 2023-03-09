@@ -1,10 +1,10 @@
 import { createAsyncThunk, createSlice } from '@reduxjs/toolkit';
 import axios from 'axios';
 
-const URL = 'http://localhost:3000/api/v1';
+const URL = 'https://cherry-room-service.onrender.com/api/v1';
 export const FETCH_ROOMS = `${URL}/rooms`;
 
-const CREATE_ROOM_URL = 'http://localhost:3000/api/v1/rooms';
+const CREATE_ROOM_URL = 'https://cherry-room-service.onrender.com/api/v1/rooms';
 
 const initialState = {
   rooms: [],

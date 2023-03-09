@@ -1,9 +1,9 @@
 import { createAsyncThunk, createSlice } from '@reduxjs/toolkit';
 
-const SIGNUP_URL = 'http://localhost:3000/signup';
-const LOGIN_URL = 'http://localhost:3000/login';
-const LOGOUT_URL = 'http://localhost:3000/logout';
-const CURRENT_USER_URL = 'http://localhost:3000/api/v1/current_user';
+const SIGNUP_URL = 'https://cherry-room-service.onrender.com/signup';
+const LOGIN_URL = 'https://cherry-room-service.onrender.com/login';
+const LOGOUT_URL = 'https://cherry-room-service.onrender.com/logout';
+const CURRENT_USER_URL = 'https://cherry-room-service.onrender.com/api/v1/current_user';
 const GET_USER_SESSION = 'current_user_session';
 const USER_SIGNED = 'user_signup';
 const USER_LOGGED = 'user_login';
