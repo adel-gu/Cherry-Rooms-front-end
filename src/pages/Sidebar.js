@@ -137,7 +137,11 @@ const Sidebar = () => {
                   {!currentUser ? '' : currentUser.f_name}
                 </strong>
 
-                <span> {!currentUser ? '' : currentUser.email} </span>
+                <span>
+                  {' '}
+                  {!currentUser ? '' : currentUser.email}
+                  {' '}
+                </span>
               </p>
             </div>
           </NavLink>
