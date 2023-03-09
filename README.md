@@ -63,6 +63,8 @@ Cherry Rooms is a front-end React project designed for the purpose of booking ro
 
 ### [Cherry Rooms Backend ⚙️](https://github.com/adel-gu/Cherry-Rooms-back-end)
 
+### [Kanban Board 🖧](https://github.com/users/adel-gu/projects/4)
+
 ## 🛠 Built With <a name="built-with"></a>
 
 ### Tech Stack <a name="tech-stack"></a>
