@@ -19,18 +19,12 @@ REQUIRED SECTIONS:
 - Acknowledgements
 - License
 
-OPTIONAL SECTIONS:
-- FAQ
-
 After you're finished please remove all the comments and instructions!
 -->
 
 <div align="center">
-  <!-- You are encouraged to replace this logo with your own! Otherwise you can also remove it. -->
-  <img src="murple_logo.png" alt="logo" width="140"  height="auto" />
-  <br/>
 
-  <h3><b>Microverse README Template</b></h3>
+  <h3><b>CHERRY ROOMS FRONT END 🎨</b></h3>
 
 </div>
 
@@ -49,29 +43,35 @@ After you're finished please remove all the comments and instructions!
   - [Install](#install)
   - [Usage](#usage)
   - [Run tests](#run-tests)
-  - [Deployment](#triangular_flag_on_post-deployment)
+  - [Deployment](#deployment)
 - [👥 Authors](#authors)
 - [🔭 Future Features](#future-features)
 - [🤝 Contributing](#contributing)
 - [⭐️ Show your support](#support)
 - [🙏 Acknowledgements](#acknowledgements)
-- [❓ FAQ (OPTIONAL)](#faq)
+- [❓ FAQ](#faq)
 - [📝 License](#license)
 
 <!-- PROJECT DESCRIPTION -->
 
-# 📖 [your_project_name] <a name="about-project"></a>
+# 📖 Cherry Rooms <a name="about-project"></a>
 
-> Describe your project in 1 or 2 sentences.
+Cherry Rooms is a front-end React project designed for the purpose of booking rooms in hotels, motels, or any other accommodation service. This project provides an intuitive and user-friendly interface that allows users to easily browse and reserve rooms based on their preferences and availability. The project is built using React, HTML, CSS, and JavaScript, with the use of APIs to fetch data from the backend.
 
-**[your_project__name]** is a...
+![Screenshot from 2023-03-09 16-22-37](https://user-images.githubusercontent.com/68030297/224071088-07aac88e-6b3e-467b-beea-b65348c0993d.png)
+
+
+### [Cherry Rooms Backend ⚙️](https://github.com/adel-gu/Cherry-Rooms-back-end)
+
+### Kanban Board 🖧
+
+- [Kanban Board](https://github.com/users/adel-gu/projects/4)
+
+![image](https://user-images.githubusercontent.com/68030297/224122245-94fe2fe0-d83b-460d-afe9-677615806235.png)
 
 ## 🛠 Built With <a name="built-with"></a>
 
 ### Tech Stack <a name="tech-stack"></a>
-
-> Describe the tech stack and include only the relevant sections that apply to your project.
-
 <details>
   <summary>Client</summary>
   <ul>
@@ -80,16 +80,17 @@ After you're finished please remove all the comments and instructions!
 </details>
 
 <details>
-  <summary>Server</summary>
+  <summary>State Managment</summary>
   <ul>
-    <li><a href="https://expressjs.com/">Express.js</a></li>
+    <li><a href="https://redux-toolkit.js.org/https://redux-toolkit.js.org/">Redux</a></li>
   </ul>
 </details>
 
 <details>
-<summary>Database</summary>
+<summary>UI libraries</summary>
   <ul>
-    <li><a href="https://www.postgresql.org/">PostgreSQL</a></li>
+    <li>React Icons</li>
+    <li>Tailwind CSS</li>
   </ul>
 </details>
 
@@ -97,11 +98,15 @@ After you're finished please remove all the comments and instructions!
 
 ### Key Features <a name="key-features"></a>
 
-> Describe between 1-3 key features of the application.
-
-- **[key_feature_1]**
-- **[key_feature_2]**
-- **[key_feature_3]**
+- **USER SIGNUP**
+- **USER SIGNIN**
+- **USER LOGOUT**
+- **CREATE A ROOM**
+- **DISPLAY LIST OF ROOMS**
+- **DELETE A ROOM**
+- **CREATE A RESERVATION**
+- **DISPLAY LIST OF RESERVATIONS**
+- **DELETE A RESERVATION**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -109,9 +114,7 @@ After you're finished please remove all the comments and instructions!
 
 ## 🚀 Live Demo <a name="live-demo"></a>
 
-> Add a link to your deployed project.
-
-- [Live Demo Link](https://yourdeployedapplicationlink.com)
+- [Live Demo Link](https://cherryrooms.netlify.app/)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -119,83 +122,58 @@ After you're finished please remove all the comments and instructions!
 
 ## 💻 Getting Started <a name="getting-started"></a>
 
-> Describe how a new developer could make use of your project.
-
 To get a local copy up and running, follow these steps.
 
 ### Prerequisites
 
 In order to run this project you need:
 
-<!--
-Example command:
+1. Node.js: React is built on top of Node.js, Therefore, you need to have Node.js installed on your machine.
 
-```sh
- gem install rails
-```
- -->
+2. Text Editor: You will need a text editor to write your React code. such as Visual Studio Code, Atom, and Sublime Text.
+
+3. Web Browser: You will need a web browser to view your React app. such as Google Chrome, Firefox, and Safari.
+
+4. Command Line Interface (CLI): You will need a CLI to run commands for installing dependencies and running your React app. The most commonly used CLI for React development is the Node Package Manager (npm).
 
 ### Setup
 
 Clone this repository to your desired folder:
 
-<!--
-Example commands:
-
 ```sh
   cd my-folder
-  git clone git@github.com:myaccount/my-project.git
+  git clone git@github.com:adel-gu/Cherry-Rooms-front-end.git
 ```
---->
 
 ### Install
 
 Install this project with:
 
-<!--
-Example command:
-
 ```sh
-  cd my-project
-  gem install
+  cd Cherry-Rooms-front-end
+  npm install
 ```
---->
 
 ### Usage
 
 To run the project, execute the following command:
 
-<!--
-Example command:
-
 ```sh
-  rails server
+  npm start
 ```
---->
 
 ### Run tests
 
 To run tests, run the following command:
 
-<!--
-Example command:
-
 ```sh
-  bin/rails test test/models/article_test.rb
+  npm test
 ```
---->
 
-### Deployment
+### Deployment <a name="deployment"></a>
 
 You can deploy this project using:
-
-<!--
-Example:
-
-```sh
-
-```
- -->
+- [Netlify](https://app.netlify.com/)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -203,19 +181,28 @@ Example:
 
 ## 👥 Authors <a name="authors"></a>
 
-> Mention all of the collaborators of this project.
+👤 **Adel Guitoun**
 
-👤 **Author1**
+- GitHub: [@adel-gu](https://github.com/adel-gu)
+- Twitter: [@GuitounAdel](https://twitter.com/GuitounAdel)
+- LinkedIn: [adelguitoun](https://linkedin.com/in/adelguitoun)
 
-- GitHub: [@githubhandle](https://github.com/githubhandle)
-- Twitter: [@twitterhandle](https://twitter.com/twitterhandle)
+👤 **Zuhaib Amjad**
+
+- GitHub: [@Zuhaib042](https://github.com/Zuhaib042)
+- Twitter: [@Zuhaib042](https://twitter.com/Zuhaib042)
 - LinkedIn: [LinkedIn](https://linkedin.com/in/linkedinhandle)
 
-👤 **Author2**
+👤 **Aminu Rabiu**
 
-- GitHub: [@githubhandle](https://github.com/githubhandle)
-- Twitter: [@twitterhandle](https://twitter.com/twitterhandle)
-- LinkedIn: [LinkedIn](https://linkedin.com/in/linkedinhandle)
+- GitHub: [@arabiu033](https://github.com/arabiu033)
+- LinkedIn: [arabiu](https://www.linkedin.com/in/arabiu/)
+
+👤 **Joel Kugonza**
+
+- GitHub: [@Joel-100](https://github.com/Joel-100)
+- Twitter: [@Joel Kugonza](https://twitter.com/JoelKugonza)
+- LinkedIn: [@Joel Kugonza](https://www.linkedin.com/in/joel-kugonza-879211190/)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -223,11 +210,9 @@ Example:
 
 ## 🔭 Future Features <a name="future-features"></a>
 
-> Describe 1 - 3 features you will add to the project.
-
-- [ ] **[new_feature_1]**
-- [ ] **[new_feature_2]**
-- [ ] **[new_feature_3]**
+- [ ] **Adding UI loaders:** When the App makes a fetch request to the backend the loaders will fill that delay  for getting the response.
+- [ ] **Allow the user to edit the room image**
+- [ ] **Allow the user to edit his avatar**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -245,9 +230,7 @@ Feel free to check the [issues page](../../issues/).
 
 ## ⭐️ Show your support <a name="support"></a>
 
-> Write a message to encourage readers to support your project
-
-If you like this project...
+If you like this project, kindly give it a star 🥇
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -255,25 +238,21 @@ If you like this project...
 
 ## 🙏 Acknowledgments <a name="acknowledgements"></a>
 
-> Give credit to everyone who inspired your codebase.
-
-I would like to thank...
+I would like to thank [microverseinc](https://github.com/microverseinc) since the project requirement as well as the project design is inspired and provided by Microverse.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- FAQ (optional) -->
 
-## ❓ FAQ (OPTIONAL) <a name="faq"></a>
+## ❓ FAQ <a name="faq"></a>
 
-> Add at least 2 questions new developers would ask when they decide to use your project.
+- **When I signup or login to the app it take a some while!?**
 
-- **[Question_1]**
+  - Retrieving data from a backend can take time, especially if the app is on a free plan that may have limitations on server resources. so Kindly be patient then you will start getting some result.
 
-  - [Answer_1]
+- **How can I add my avatar image?**
 
-- **[Question_2]**
-
-  - [Answer_2]
+  - To be able to add you avatar you need to provide an online link for your image. 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -281,8 +260,7 @@ I would like to thank...
 
 ## 📝 License <a name="license"></a>
 
-This project is [MIT](./LICENSE) licensed.
+This project is [MIT](./MIT.md) licensed.
 
-_NOTE: we recommend using the [MIT license](https://choosealicense.com/licenses/mit/) - you can set it up quickly by [using templates available on GitHub](https://docs.github.com/en/communities/setting-up-your-project-for-healthy-contributions/adding-a-license-to-a-repository). You can also use [any other license](https://choosealicense.com/licenses/) if you wish._
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
