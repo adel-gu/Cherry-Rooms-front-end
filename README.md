@@ -238,7 +238,8 @@ If you like this project, kindly give it a star 🥇
 
 ## 🙏 Acknowledgments <a name="acknowledgements"></a>
 
-I would like to thank [microverseinc](https://github.com/microverseinc) since the project requirement as well as the project design is inspired and provided by Microverse.
+- I would like to thank [microverseinc](https://github.com/microverseinc) since the project requirement as well as the project design is inspired and provided by Microverse.
+- Huge thanks to [Murat Korkmaz](https://www.behance.net/muratk) since the APP UI is inspired from his design.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
