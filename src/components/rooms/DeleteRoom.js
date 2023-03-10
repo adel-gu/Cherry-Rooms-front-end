@@ -6,8 +6,8 @@ import Sidebar from '../../pages/Sidebar';
 
 const DeleteRoom = () => {
   const dispatch = useDispatch();
+  const userId = useSelector((state) => state.user.currentUser.id);
   const rooms = useSelector(selectAllRooms);
-  const userId = useSelector((state) => state.user.data.id);
   const filteredRooms = rooms.filter((room) => room.user_id === userId);
 
   const roomslist = filteredRooms.map((room) => (
