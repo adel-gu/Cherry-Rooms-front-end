@@ -1,6 +1,6 @@
 import { Routes, Route, useNavigate } from 'react-router-dom';
 
-import { useEffect } from 'react';
+import { useCallback, useEffect } from 'react';
 import { useDispatch } from 'react-redux';
 import ReservationCard from './components/reservations/ReservationCard';
 import MyReservation from './components/reservations/MyReservation';
@@ -17,7 +17,7 @@ const App = () => {
   const dispatch = useDispatch();
   const navigate = useNavigate();
 
-  const isUserAuthenticated = () => {
+  const isUserAuthenticated = useCallback(() => {
     const token = localStorage.getItem('token');
     if (token) {
       dispatch(getCurrentUser()).then((res) => {
@@ -26,11 +26,11 @@ const App = () => {
         if (currentUser && window.location.pathname === '/') navigate('rooms');
       });
     }
-  };
+  }, [dispatch, navigate]);
 
   useEffect(() => {
     isUserAuthenticated();
-  }, [dispatch]);
+  }, [isUserAuthenticated]);
 
   return (
     <>

@@ -47,7 +47,7 @@ export default function ReservationCard() {
       <Sidebar />
       <div className="main-container">
         <div className={style.outerContainer}>
-          <div className={`${style.container} shadow-lg`}>
+          <div className={`${style.container}`}>
             {roomId && (
               <RoomDetails
                 room={{

@@ -1,4 +1,4 @@
-## Copyright 2022, Group
+## Copyright 2023, Adel Guitoun, Aminu Rabiu, Hafiz Muhammad Zuhaib, Joel Kugonza
 
 Permission is hereby granted, free of charge, to any person obtaining a copy of this Micro-Tasks and associated documentation files, to deal in the Micro-Tasks without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Micro-Tasks, and to permit persons to whom the Micro-Tasks is furnished to do so, subject to the following conditions:
 

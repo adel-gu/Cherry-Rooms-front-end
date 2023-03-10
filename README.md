@@ -1,70 +1,266 @@
-# Getting Started with Create React App
+<a name="readme-top"></a>
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+<!--
+HOW TO USE:
+This is an example of how you may give instructions on setting up your project locally.
 
-## Available Scripts
+Modify this file to match your project and remove sections that don't apply.
 
-In the project directory, you can run:
+REQUIRED SECTIONS:
+- Table of Contents
+- About the Project
+  - Built With
+  - Live Demo
+- Getting Started
+- Authors
+- Future Features
+- Contributing
+- Show your support
+- Acknowledgements
+- License
 
-### `npm start`
+After you're finished please remove all the comments and instructions!
+-->
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+<div align="center">
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+  <h3><b>CHERRY ROOMS FRONT END 🎨</b></h3>
 
-### `npm test`
+</div>
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+<!-- TABLE OF CONTENTS -->
 
-### `npm run build`
+# 📗 Table of Contents
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- [📖 About the Project](#about-project)
+  - [🛠 Built With](#built-with)
+    - [Tech Stack](#tech-stack)
+    - [Key Features](#key-features)
+  - [🚀 Live Demo](#live-demo)
+- [💻 Getting Started](#getting-started)
+  - [Setup](#setup)
+  - [Prerequisites](#prerequisites)
+  - [Install](#install)
+  - [Usage](#usage)
+  - [Run tests](#run-tests)
+  - [Deployment](#deployment)
+- [👥 Authors](#authors)
+- [🔭 Future Features](#future-features)
+- [🤝 Contributing](#contributing)
+- [⭐️ Show your support](#support)
+- [🙏 Acknowledgements](#acknowledgements)
+- [❓ FAQ](#faq)
+- [📝 License](#license)
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+<!-- PROJECT DESCRIPTION -->
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+# 📖 Cherry Rooms <a name="about-project"></a>
 
-### `npm run eject`
+Cherry Rooms is a front-end React project designed for the purpose of booking rooms in hotels, motels, or any other accommodation service. This project provides an intuitive and user-friendly interface that allows users to easily browse and reserve rooms based on their preferences and availability. The project is built using React, HTML, CSS, and JavaScript, with the use of APIs to fetch data from the backend.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+![Screenshot from 2023-03-09 16-22-37](https://user-images.githubusercontent.com/68030297/224071088-07aac88e-6b3e-467b-beea-b65348c0993d.png)
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+### [Cherry Rooms Backend ⚙️](https://github.com/adel-gu/Cherry-Rooms-back-end)
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+### Kanban Board 🖧
 
-## Learn More
+- [Kanban Board](https://github.com/users/adel-gu/projects/4)
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+![image](https://user-images.githubusercontent.com/68030297/224122245-94fe2fe0-d83b-460d-afe9-677615806235.png)
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## 🛠 Built With <a name="built-with"></a>
 
-### Code Splitting
+### Tech Stack <a name="tech-stack"></a>
+<details>
+  <summary>Client</summary>
+  <ul>
+    <li><a href="https://reactjs.org/">React.js</a></li>
+  </ul>
+</details>
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+<details>
+  <summary>State Managment</summary>
+  <ul>
+    <li><a href="https://redux-toolkit.js.org/https://redux-toolkit.js.org/">Redux</a></li>
+  </ul>
+</details>
 
-### Analyzing the Bundle Size
+<details>
+<summary>UI libraries</summary>
+  <ul>
+    <li>React Icons</li>
+    <li>Tailwind CSS</li>
+  </ul>
+</details>
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+<!-- Features -->
 
-### Making a Progressive Web App
+### Key Features <a name="key-features"></a>
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+- **USER SIGNUP**
+- **USER SIGNIN**
+- **USER LOGOUT**
+- **CREATE A ROOM**
+- **DISPLAY LIST OF ROOMS**
+- **DELETE A ROOM**
+- **CREATE A RESERVATION**
+- **DISPLAY LIST OF RESERVATIONS**
+- **DELETE A RESERVATION**
 
-### Advanced Configuration
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+<!-- LIVE DEMO -->
 
-### Deployment
+## 🚀 Live Demo <a name="live-demo"></a>
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+- [Live Demo Link](https://cherryrooms.netlify.app/)
 
-### `npm run build` fails to minify
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+<!-- GETTING STARTED -->
+
+## 💻 Getting Started <a name="getting-started"></a>
+
+To get a local copy up and running, follow these steps.
+
+### Prerequisites
+
+In order to run this project you need:
+
+1. Node.js: React is built on top of Node.js, Therefore, you need to have Node.js installed on your machine.
+
+2. Text Editor: You will need a text editor to write your React code. such as Visual Studio Code, Atom, and Sublime Text.
+
+3. Web Browser: You will need a web browser to view your React app. such as Google Chrome, Firefox, and Safari.
+
+4. Command Line Interface (CLI): You will need a CLI to run commands for installing dependencies and running your React app. The most commonly used CLI for React development is the Node Package Manager (npm).
+
+### Setup
+
+Clone this repository to your desired folder:
+
+```sh
+  cd my-folder
+  git clone git@github.com:adel-gu/Cherry-Rooms-front-end.git
+```
+
+### Install
+
+Install this project with:
+
+```sh
+  cd Cherry-Rooms-front-end
+  npm install
+```
+
+### Usage
+
+To run the project, execute the following command:
+
+```sh
+  npm start
+```
+
+### Run tests
+
+To run tests, run the following command:
+
+```sh
+  npm test
+```
+
+### Deployment <a name="deployment"></a>
+
+You can deploy this project using:
+- [Netlify](https://app.netlify.com/)
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+<!-- AUTHORS -->
+
+## 👥 Authors <a name="authors"></a>
+
+👤 **Adel Guitoun**
+
+- GitHub: [@adel-gu](https://github.com/adel-gu)
+- Twitter: [@GuitounAdel](https://twitter.com/GuitounAdel)
+- LinkedIn: [adelguitoun](https://linkedin.com/in/adelguitoun)
+
+👤 **Zuhaib Amjad**
+
+- GitHub: [@Zuhaib042](https://github.com/Zuhaib042)
+- Twitter: [@Zuhaib042](https://twitter.com/Zuhaib042)
+- LinkedIn: [LinkedIn](https://linkedin.com/in/linkedinhandle)
+
+👤 **Aminu Rabiu**
+
+- GitHub: [@arabiu033](https://github.com/arabiu033)
+- LinkedIn: [arabiu](https://www.linkedin.com/in/arabiu/)
+
+👤 **Joel Kugonza**
+
+- GitHub: [@Joel-100](https://github.com/Joel-100)
+- Twitter: [@Joel Kugonza](https://twitter.com/JoelKugonza)
+- LinkedIn: [@Joel Kugonza](https://www.linkedin.com/in/joel-kugonza-879211190/)
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+<!-- FUTURE FEATURES -->
+
+## 🔭 Future Features <a name="future-features"></a>
+
+- [ ] **Adding UI loaders:** When the App makes a fetch request to the backend the loaders will fill that delay  for getting the response.
+- [ ] **Allow the user to edit the room image**
+- [ ] **Allow the user to edit his avatar**
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+<!-- CONTRIBUTING -->
+
+## 🤝 Contributing <a name="contributing"></a>
+
+Contributions, issues, and feature requests are welcome!
+
+Feel free to check the [issues page](../../issues/).
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+<!-- SUPPORT -->
+
+## ⭐️ Show your support <a name="support"></a>
+
+If you like this project, kindly give it a star 🥇
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+<!-- ACKNOWLEDGEMENTS -->
+
+## 🙏 Acknowledgments <a name="acknowledgements"></a>
+
+I would like to thank [microverseinc](https://github.com/microverseinc) since the project requirement as well as the project design is inspired and provided by Microverse.
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+<!-- FAQ (optional) -->
+
+## ❓ FAQ <a name="faq"></a>
+
+- **When I signup or login to the app it take a some while!?**
+
+  - Retrieving data from a backend can take time, especially if the app is on a free plan that may have limitations on server resources. so Kindly be patient then you will start getting some result.
+
+- **How can I add my avatar image?**
+
+  - To be able to add you avatar you need to provide an online link for your image. 
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+<!-- LICENSE -->
+
+## 📝 License <a name="license"></a>
+
+This project is [MIT](./MIT.md) licensed.
+
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>

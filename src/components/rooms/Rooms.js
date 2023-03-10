@@ -19,7 +19,7 @@ const Rooms = () => {
 
   useEffect(() => {
     dispatch(getRooms());
-  }, []);
+  }, [dispatch]);
 
   return (
     <>
