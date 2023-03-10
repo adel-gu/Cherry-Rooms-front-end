@@ -1,11 +1,7 @@
 import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { useNavigate, useParams } from 'react-router-dom';
-import {
-  selectRoom,
-  getRoomStatus,
-  getSingleRoom,
-} from '../../redux/rooms/roomDetailSlice';
+import { selectRoom, getSingleRoom } from '../../redux/rooms/roomDetailSlice';
 import '../../styles/roomdetails.css';
 import Sidebar from '../../pages/Sidebar';
 
@@ -15,12 +11,9 @@ const RoomDetails = () => {
   const navigate = useNavigate();
 
   const room = useSelector(selectRoom);
-  const roomStatus = useSelector(getRoomStatus);
   useEffect(() => {
-    if (roomStatus === 'idle') {
-      dispatch(getSingleRoom(id));
-    }
-  }, [id, roomStatus, dispatch]);
+    dispatch(getSingleRoom(id));
+  }, [id, dispatch]);
 
   return (
     <>
